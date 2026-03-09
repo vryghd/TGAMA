@@ -6,70 +6,109 @@
     <title>THE GREAT AWAKEN MARKETING FIRM | Contracting Lead Generation</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Inter:wght@400;600&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <nav>
         <div class="logo-group">
-            <img src="https://i.ibb.co/Xz9kH54/blue-gold-arrow-logo.png" alt="THE GREAT AWAKEN MARKETING FIRM Logo" class="blue-logo"> <div class="text-logo">
+            <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69ab16e131de25a9b3dd0b07/253fb676b_logo.png" alt="THE GREAT AWAKEN MARKETING FIRM Logo" class="blue-logo"> 
+            <div class="text-logo">
                 <span class="white-text">THE GREAT AWAKEN</span>
                 <span class="gold-text">MARKETING FIRM</span>
             </div>
         </div>
-        <div class="nav-links">
+        <div class="nav-links" id="navLinks">
             <a href="#home">Home</a>
             <a href="#services">Services</a>
+            <a href="#process">Our Process</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
             <a href="#get-started" class="btn-gold">Get Started</a>
         </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </nav>
 
     <header class="hero" id="home">
-        <div class="hero-container">
+        <div class="hero-container animate-on-scroll">
             <span class="badge">● FOR CONTRACTORS, BY CONTRACTORS</span>
             <h1>Awaken Your<br>Business Potential</h1>
             <p>We help land clearing companies, pool builders, remodelers, and roofers dominate their local markets with cutting-edge digital marketing strategies.</p>
             <div class="hero-btns">
-                <a href="#get-started" class="btn-gold">Start Growing Today →</a>
+                <a href="#contact" class="btn-gold">Start Growing Today →</a>
                 <a href="#services" class="btn-outline">View Our Services</a>
             </div>
         </div>
     </header>
 
     <section class="stats">
-        <div class="stat-item"><h2>500+</h2><p>CONTRACTORS SERVED</p></div>
-        <div class="stat-item"><h2>3x</h2><p>AVG. LEAD INCREASE</p></div>
-        <div class="stat-item"><h2>98%</h2><p>CLIENT RETENTION</p></div>
+        <div class="stat-item animate-on-scroll"><h2>500+</h2><p>CONTRACTORS SERVED</p></div>
+        <div class="stat-item animate-on-scroll"><h2>3x</h2><p>AVG. LEAD INCREASE</p></div>
+        <div class="stat-item animate-on-scroll"><h2>98%</h2><p>CLIENT RETENTION</p></div>
     </section>
 
     <section class="built-for-contractors" id="services">
-        <h2>Built for Contractors, By Contractors</h2>
+        <h2 class="animate-on-scroll">Built for Contractors, By Contractors</h2>
         <div class="services-grid">
-            <div class="service-card" style="background-image: url('https://i.ibb.co/tZ58N04/call-center-muted.jpg')"> <div class="card-overlay">
-                    <i class="fas fa-bullhorn card-icon"></i> <h4>Lead Generation</h4>
-                    <p>Muted image transitions to color on hover, matching the subtle background.</p>
+            <div class="service-card animate-on-scroll" style="background-image: url('https://i.ibb.co/tZ58N04/call-center-muted.jpg')"> 
+                <div class="card-overlay">
+                    <i class="fas fa-bullhorn card-icon"></i> 
+                    <h4>Lead Generation</h4>
+                    <p>High-quality leads that actually turn into jobs, not just "lookers".</p>
                 </div>
             </div>
-            <div class="service-card" style="background-image: url('https://i.ibb.co/zXp4DqP/seo-charts-muted.jpg')">
+            <div class="service-card animate-on-scroll" style="background-image: url('https://i.ibb.co/zXp4DqP/seo-charts-muted.jpg')">
                 <div class="card-overlay">
                     <i class="fas fa-search-dollar card-icon"></i>
                     <h4>SEO Optimization</h4>
-                    <p>Get found by local customers looking for your services.</p>
+                    <p>Dominate local search results and be the first choice for homeowners.</p>
                 </div>
             </div>
-            <div class="service-card" style="background-image: url('https://i.ibb.co/rMDsB0m/ppc-budget-muted.jpg')">
+            <div class="service-card animate-on-scroll" style="background-image: url('https://i.ibb.co/rMDsB0m/ppc-budget-muted.jpg')">
                 <div class="card-overlay">
                     <i class="fas fa-ad card-icon"></i>
                     <h4>PPC Campaigns</h4>
-                    <p>Efficient ad spend to maximize your ROI.</p>
+                    <p>Precise ad targeting to get your phone ringing immediately.</p>
                 </div>
             </div>
-            <div class="service-card" style="background-image: url('https://i.ibb.co/3Wf4gN4/developer-muted.jpg')">
+            <div class="service-card animate-on-scroll" style="background-image: url('https://i.ibb.co/3Wf4gN4/developer-muted.jpg')">
                 <div class="card-overlay">
                     <i class="fas fa-sitemap card-icon"></i>
                     <h4>Website Design</h4>
-                    <p>Professional websites that convert visitors to customers.</p>
+                    <p>Websites built to convert, not just look pretty.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-process" id="process">
+        <div class="container">
+            <h2 class="animate-on-scroll">Our Proven Process</h2>
+            <div class="process-grid">
+                <div class="process-item animate-on-scroll">
+                    <div class="process-number">01</div>
+                    <h4>Discovery Call</h4>
+                    <p>We analyze your current marketing and identify growth opportunities.</p>
+                </div>
+                <div class="process-item animate-on-scroll">
+                    <div class="process-number">02</div>
+                    <h4>Custom Strategy</h4>
+                    <p>We build a roadmap tailored specifically to your trade and location.</p>
+                </div>
+                <div class="process-item animate-on-scroll">
+                    <div class="process-number">03</div>
+                    <h4>Launch & Optimize</h4>
+                    <p>We deploy your campaigns and continuously refine for maximum ROI.</p>
+                </div>
+                <div class="process-item animate-on-scroll">
+                    <div class="process-number">04</div>
+                    <h4>Scale Your Business</h4>
+                    <p>Enjoy a steady flow of leads while you focus on finishing projects.</p>
                 </div>
             </div>
         </div>
@@ -77,25 +116,59 @@
 
     <section class="testimonials" id="about">
         <div class="container">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonial-card">
+            <h2 class="animate-on-scroll">What Our Clients Say</h2>
+            <div class="testimonial-card animate-on-scroll">
                 <p class="quote">"They transformed our online presence and the leads started pouring in!"</p>
                 <h4>- John D., ABC Roofing</h4>
             </div>
-            <div class="testimonial-card">
+            <div class="testimonial-card animate-on-scroll">
                 <p class="quote">"Finally, a marketing firm that understands contractors."</p>
                 <h4>- Mike S., Precision Landscaping</h4>
             </div>
         </div>
     </section>
 
-    <section class="cta-banner" id="get-started">
-        <h2>Stop Losing Leads to Your Competition</h2>
-        <p>Let's build a strategy to make you the go-to contractor in your area.</p>
-        <a href="#contact" class="btn-primary">Schedule Free Consultation</a>
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info animate-on-scroll">
+                    <h2>Get in Touch</h2>
+                    <p>Ready to scale? Fill out the form and we'll be in touch within 24 hours.</p>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+1 469-612-9630</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>cameron@thegamarketingfirm.cc</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>1600 W Loop S, Houston, TX 77027</p>
+                    </div>
+                </div>
+                <div class="contact-form animate-on-scroll">
+                    <form action="#" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Company Name">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Tell us about your project" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-gold">Send Message →</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer id="contact">
+    <footer id="footer-contact">
         <div class="footer-content">
             <div class="footer-logo-group">
                 <img src="https://i.ibb.co/Xz9kH54/blue-gold-arrow-logo.png" alt="THE GREAT AWAKEN MARKETING FIRM Footer Logo" class="blue-logo">
