@@ -74,7 +74,7 @@ nav {
 }
 
 .blue-logo {
-    height: 110px; /* Further enlarged */
+    height: 145px; /* Increased size by ~33% */
     width: auto;
     object-fit: contain;
     filter: brightness(1.2) contrast(1.1); /* Enhances logo visibility */
