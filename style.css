@@ -109,6 +109,9 @@ nav {
     padding: 12px 24px;
     border-radius: 8px;
     font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 /* Mobile Menu Toggle */
@@ -159,6 +162,8 @@ nav {
     color: var(--text-white);
     text-decoration: none;
     margin-left: 15px;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 
 /* Services / Contractor Squares */
