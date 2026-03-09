@@ -500,7 +500,27 @@ footer {
     .nav-links a { margin: 20px 0; font-size: 1.2rem; }
     .nav-links .btn-gold { margin-top: 20px; }
 
-    .hero h1 { font-size: 2.5rem; }
+    .hero h1 { font-size: 2.2rem; line-height: 1.2; }
+    .hero p { font-size: 1rem; padding: 0 10px; }
+    .hero-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    .hero-btns .btn-outline {
+        margin-left: 0;
+        width: 100%;
+        max-width: 280px;
+    }
+    .hero-btns .btn-gold {
+        width: 100%;
+        max-width: 280px;
+    }
+    .hero {
+        padding: 150px 5% 80px;
+    }
+
     .stats { flex-direction: column; align-items: center; }
     
     .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
