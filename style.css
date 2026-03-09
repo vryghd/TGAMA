@@ -307,10 +307,12 @@ nav {
     font-weight: 700;
     display: block;
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 .testimonials h2 {
     margin-top: 0;
+    text-align: center;
 }
 
 .testimonial-grid {
