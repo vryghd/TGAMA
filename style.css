@@ -1,6 +1,6 @@
 :root {
     --dark-bg: #0A192F; /* Dark Navy Blue */
-    --gold: #D4AF37;    /* Gold Accent */
+    --gold: #B8860B;    /* Darker, richer Gold */
     --text-white: #FFF;
     --text-gray: #CCC;
     --card-dark: #172a45;
@@ -14,7 +14,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.95)),
+    background: linear-gradient(rgba(10, 25, 47, 0.92), rgba(10, 25, 47, 0.96)),
                 url('Pictures/Background.jpg.webp') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
@@ -56,7 +56,7 @@ h2 {
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem 5%;
+    padding: 0.2rem 5%;
     align-items: center;
     background-color: rgba(10, 25, 47, 0.95);
     backdrop-filter: blur(10px);
@@ -74,9 +74,10 @@ nav {
 }
 
 .blue-logo {
-    height: 60px;
+    height: 85px; /* Increased size */
     width: auto;
     object-fit: contain;
+    mix-blend-mode: lighten; /* Helps remove dark backgrounds from logo */
 }
 
 .text-logo {
