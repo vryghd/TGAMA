@@ -305,21 +305,38 @@ nav {
     text-align: center;
 }
 
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
 .testimonial-card {
     background-color: rgba(23, 42, 69, 0.8);
     padding: 2.5rem;
     border-radius: 12px;
-    margin: 0 auto 2rem;
-    max-width: 800px;
     border-left: 5px solid var(--gold);
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
 }
 
 .quote {
     font-style: italic;
     font-family: 'Lora', serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 1.5rem;
     color: var(--text-gray);
+    line-height: 1.8;
+}
+
+.testimonial-card h4 {
+    color: var(--gold);
+    font-size: 1rem;
 }
 
 /* Contact Section */
