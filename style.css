@@ -563,13 +563,98 @@ footer {
     }
 
     .menu-toggle { display: flex; }
-...
+
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(11px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-11px) rotate(-45deg); }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-bg);
+        padding: 2rem;
+        border-bottom: 2px solid var(--gold);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        margin: 1rem 0;
+        font-size: 1.1rem;
+        margin-left: 0;
+    }
+
     .hero {
         padding: 140px 5% 80px; /* Adjusted top padding for smaller mobile logo */
     }
 
-    .stats { flex-direction: column; align-items: center; }
-...
+    .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+    .hero-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .hero-btns .btn-outline {
+        margin-left: 0;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .btn-gold {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .stats { 
+        flex-direction: column; 
+        align-items: center; 
+        padding: 60px 5%;
+    }
+
+    .service-card.bold-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .contact-form form {
+        padding: 1.5rem;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-logo-group {
+        max-width: 100%;
+    }
 }
 
 /* Our Mission */
