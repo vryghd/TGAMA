@@ -74,27 +74,15 @@ nav {
 }
 
 .blue-logo {
-    height: 85px; /* Increased size */
+    height: 110px; /* Further enlarged */
     width: auto;
     object-fit: contain;
-    mix-blend-mode: lighten; /* Helps remove dark backgrounds from logo */
+    filter: brightness(1.2) contrast(1.1); /* Enhances logo visibility */
+    mix-blend-mode: lighten; 
 }
 
 .text-logo {
-    display: flex;
-    flex-direction: column;
-}
-
-.white-text {
-    font-size: 1.1rem;
-    color: var(--text-white);
-    font-weight: 700;
-}
-
-.gold-text {
-    font-size: 0.8rem;
-    color: var(--gold);
-    letter-spacing: 2px;
+    display: none; /* Hide text logo to let the enlarged image shine */
 }
 
 .nav-links {
@@ -141,7 +129,7 @@ nav {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 180px 10% 100px;
+    padding: 220px 10% 120px;
 }
 
 .badge {
@@ -173,8 +161,8 @@ nav {
     margin-left: 15px;
 }
 
-/* Services */
-.built-for-contractors {
+/* Services / Contractor Squares */
+.built-for-contractors, .contractor-features {
     padding: 4rem 5%;
     text-align: center;
 }
@@ -193,13 +181,13 @@ nav {
     overflow: hidden;
     height: 350px;
     position: relative;
-    transition: transform 0.3s ease, filter 0.5s ease;
-    filter: grayscale(100%) opacity(0.8);
+    transition: all 0.5s ease;
+    filter: grayscale(100%) brightness(0.7);
 }
 
 .service-card:hover {
-    filter: grayscale(0%) opacity(1);
-    transform: translateY(-10px);
+    filter: grayscale(0%) brightness(1);
+    transform: scale(1.03);
 }
 
 .service-card::after {
@@ -212,6 +200,7 @@ nav {
     border-radius: 12px;
     border: 3px solid transparent;
     transition: border-color 0.5s ease;
+    pointer-events: none;
 }
 
 .service-card:hover::after {
@@ -237,7 +226,7 @@ nav {
     color: var(--gold);
 }
 
-/* Our Process */
+/* Our Process Section - Solid Colors with Hover */
 .our-process {
     background-color: #0d1d36;
     text-align: center;
@@ -256,20 +245,38 @@ nav {
     border-radius: 12px;
     position: relative;
     border-bottom: 4px solid var(--gold);
-    transition: transform 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    z-index: 1;
 }
 
 .process-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    background: #1d3354;
+    border-bottom-color: var(--text-white);
 }
 
 .process-number {
-    font-size: 4rem;
+    font-size: 1.5rem;
     font-weight: 900;
-    color: rgba(212, 175, 55, 0.05);
+    color: var(--dark-bg);
+    background-color: var(--gold);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
     position: absolute;
-    top: 10px;
+    top: 20px;
     right: 20px;
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+
+.process-item:hover .process-number {
+    background-color: var(--text-white);
+    transform: rotate(360deg) scale(1.1);
 }
 
 .process-item h4 {
