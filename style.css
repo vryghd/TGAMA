@@ -182,11 +182,11 @@ nav {
     height: 350px;
     position: relative;
     transition: all 0.5s ease;
-    filter: grayscale(100%) brightness(0.7);
+    filter: brightness(0.75) contrast(1.1); /* Clearer images by default */
 }
 
 .service-card:hover {
-    filter: grayscale(0%) brightness(1);
+    filter: brightness(1.05) contrast(1.2);
     transform: scale(1.03);
 }
 
