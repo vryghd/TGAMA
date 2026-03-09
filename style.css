@@ -230,6 +230,22 @@ nav {
     margin-top: 2rem;
 }
 
+.services-grid.home-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 1200px) {
+    .services-grid.home-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .services-grid.home-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .service-card {
     background-size: cover;
     background-position: center;
