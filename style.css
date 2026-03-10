@@ -826,8 +826,7 @@ footer {
     margin-bottom: 2.5rem;
 }
 
-.form-header h3 {
-    font-size: 2rem;
+.form-header h3, .form-header h2 {
     color: var(--text-white);
     margin-bottom: 0.75rem;
     letter-spacing: -0.5px;
@@ -882,11 +881,12 @@ footer {
     padding: 1.5rem;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: left;
 }
 
 .consent-checkbox {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
     cursor: pointer;
     margin-bottom: 12px;
@@ -896,25 +896,24 @@ footer {
     accent-color: var(--gold);
     width: 18px;
     height: 18px;
+    margin-top: 2px;
+    flex-shrink: 0;
 }
 
 .consent-label {
     font-size: 0.85rem;
     color: var(--text-white);
+    line-height: 1.4;
 }
 
 .sms-disclosure {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     color: var(--text-gray);
     line-height: 1.6;
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
-.legal-links {
-    font-size: 0.75rem;
-}
-
-.legal-links a {
+.sms-disclosure a {
     color: var(--gold);
     text-decoration: underline;
 }
