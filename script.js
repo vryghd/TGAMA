@@ -65,7 +65,7 @@ window.addEventListener('scroll', () => {
 });
 
 // Form Submission Placeholder
-const contactForm = document.querySelector('#contactForm');
+const contactForm = document.querySelector('#compliantLeadForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();

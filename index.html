@@ -224,21 +224,51 @@
                     </div>
                 </div>
                 <div class="contact-form animate-on-scroll">
-                    <form action="#" id="contactForm">
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                    <!-- A2P 10DLC Compliant Lead Capture Form -->
+                    <div class="lead-capture-container">
+                        <div class="form-card">
+                            <h3>Scale Your Business</h3>
+                            <p class="form-subtitle">Enter your details below to start your growth strategy.</p>
+                            
+                            <form id="compliantLeadForm">
+                                <div class="form-group">
+                                    <input type="text" name="name" id="name" placeholder="Full Name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input type="email" name="email" id="email" placeholder="Email Address" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+                                </div>
+
+                                <!-- Mandatory Consent Checkbox -->
+                                <div class="consent-container">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="consent" id="consent" required>
+                                        <span class="consent-text">
+                                            I agree to receive communications from The Great Awaken Marketing Firm.
+                                        </span>
+                                    </label>
+                                    
+                                    <!-- Mandatory Carrier Disclosure -->
+                                    <p class="disclosure-text">
+                                        By providing your number, you agree to receive messages from The Great Awaken Marketing Firm. 
+                                        You will receive one-time authentication codes, updates, or marketing messages. 
+                                        Message frequency varies. Message & data rates may apply. Text STOP to opt out. Text HELP for help.
+                                    </p>
+
+                                    <!-- Compliance Links -->
+                                    <div class="compliance-links">
+                                        View our <a href="#privacy">Privacy Policy</a> and <a href="#terms">Terms of Service</a>.
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn-gold-form">Claim Your Strategy Call →</button>
+                            </form>
                         </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Email Address" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Company Name">
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Tell us about your project" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-gold">Send Message →</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
