@@ -747,98 +747,144 @@ footer {
     }
 }
 
-/* A2P 10DLC Form Specific Styles */
-.lead-capture-container {
-    max-width: 100%;
-    margin: 0 auto;
+/* Premium Glassmorphism Form Styles */
+.premium-form-container {
+    background: rgba(23, 42, 69, 0.6);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 3.5rem 3rem;
+    border-radius: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
 }
 
-.form-card {
-    background: var(--card-dark);
-    padding: 2.5rem;
-    border-radius: 12px;
-    border: 1px solid rgba(184, 134, 11, 0.2);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+.form-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
 }
 
-.form-card h3 {
-    font-size: 1.8rem;
+.form-header h3 {
+    font-size: 2rem;
     color: var(--text-white);
-    margin-bottom: 0.5rem;
-    text-align: center;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.5px;
 }
 
-.form-subtitle {
-    color: var(--text-gray);
-    text-align: center;
+.form-header p {
+    color: var(--gold);
     font-size: 0.95rem;
-    margin-bottom: 2rem;
+    font-weight: 500;
 }
 
-.btn-gold-form {
-    width: 100%;
-    background-color: var(--gold);
-    color: var(--dark-bg);
-    padding: 16px;
-    border: none;
-    border-radius: 8px;
-    font-weight: 800;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.high-end-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-gray);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-.btn-gold-form:hover {
-    transform: translateY(-2px);
-    filter: brightness(1.1);
-    box-shadow: 0 5px 15px rgba(184, 134, 11, 0.3);
+.field-group input {
+    background: rgba(10, 25, 47, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 14px 18px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
 }
 
-/* Consent & Disclosure Styling */
-.consent-container {
-    margin: 1.5rem 0;
-    text-align: left;
+.field-group input:focus {
+    outline: none;
+    border-color: var(--gold);
+    background: rgba(10, 25, 47, 0.8);
+    box-shadow: 0 0 15px rgba(184, 134, 11, 0.15);
 }
 
-.checkbox-label {
+/* Compliance Logic Styles */
+.compliance-box {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.consent-checkbox {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 12px;
     cursor: pointer;
-    font-size: 0.85rem;
-    color: var(--text-white);
     margin-bottom: 12px;
 }
 
-.checkbox-label input[type="checkbox"] {
+.consent-checkbox input {
+    accent-color: var(--gold);
     width: 18px;
     height: 18px;
-    margin-top: 2px;
-    accent-color: var(--gold);
-    cursor: pointer;
 }
 
-.disclosure-text {
-    font-size: 0.75rem;
+.consent-label {
+    font-size: 0.85rem;
+    color: var(--text-white);
+}
+
+.sms-disclosure {
+    font-size: 0.7rem;
     color: var(--text-gray);
-    line-height: 1.5;
+    line-height: 1.6;
     margin-bottom: 10px;
 }
 
-.compliance-links {
+.legal-links {
     font-size: 0.75rem;
-    color: var(--text-gray);
 }
 
-.compliance-links a {
+.legal-links a {
     color: var(--gold);
     text-decoration: underline;
 }
 
+.btn-premium-gold {
+    background: var(--gold);
+    color: var(--dark-bg);
+    padding: 18px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 1rem;
+}
+
+.btn-premium-gold:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(184, 134, 11, 0.4);
+}
+
+/* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
-    .form-card {
-        padding: 2rem 1.5rem;
+    .premium-form-container {
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .form-header h3 {
+        font-size: 1.6rem;
     }
 }
