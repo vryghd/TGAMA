@@ -66,7 +66,7 @@ h2 {
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 0.2rem 5%;
+    padding: 1rem 5%; /* Consistent initial padding */
     align-items: center;
     background-color: rgba(10, 25, 47, 0.95);
     backdrop-filter: blur(10px);
@@ -77,6 +77,12 @@ nav {
     transition: all 0.3s ease;
 }
 
+nav.scrolled {
+    padding: 0.6rem 5%;
+    background-color: rgba(10, 25, 47, 0.98);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
 .logo-group {
     display: flex;
     align-items: center;
@@ -84,11 +90,16 @@ nav {
 }
 
 .blue-logo {
-    height: 145px; /* Increased size by ~33% */
+    height: 145px; 
     width: auto;
     object-fit: contain;
-    filter: brightness(1.2) contrast(1.1); /* Enhances logo visibility */
-    mix-blend-mode: lighten; 
+    filter: brightness(1.2) contrast(1.1);
+    mix-blend-mode: lighten;
+    transition: height 0.3s ease;
+}
+
+nav.scrolled .blue-logo {
+    height: 120px;
 }
 
 .text-logo {

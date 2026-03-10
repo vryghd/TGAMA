@@ -43,11 +43,9 @@ document.querySelectorAll('.animate-on-scroll').forEach(el => {
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
     if (window.scrollY > 50) {
-        nav.style.background = 'rgba(10, 25, 47, 0.98)';
-        nav.style.padding = '0.8rem 5%';
+        nav.classList.add('scrolled');
     } else {
-        nav.style.background = 'rgba(10, 25, 47, 0.95)';
-        nav.style.padding = '1rem 5%';
+        nav.classList.remove('scrolled');
     }
 });
 
