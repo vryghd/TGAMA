@@ -11,6 +11,8 @@
     <meta property="og:description" content="Answers to common questions about our contractor growth systems.">
     <meta property="og:image" content="Pictures/LogoV2.png">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Inter:wght@400;600&family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons -->
@@ -36,11 +38,11 @@
             <a href="index.html#contact">Contact</a>
             <a href="mailto:cameron@thegamarketingfirm.cc?subject=Inquiry%3A%20Growth%20Strategy%20%26%20Lead%20Generation&body=Hello%2C%20I'm%20interested%20in%20learning%20more%20about%20your%20specialized%20marketing%20systems%20for%20contractors.%20I'd%20like%20to%20schedule%20a%20discovery%20call%20to%20discuss%20how%20we%20can%20dominate%20my%20local%20market.%20Best%20regards%2C" class="btn-gold">Get Started</a>
         </div>
-        <div class="menu-toggle" id="mobile-menu">
+        <button class="menu-toggle" id="mobile-menu" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="navLinks">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
-        </div>
+        </button>
     </nav>
 
     <header class="hero">
@@ -51,6 +53,7 @@
         </div>
     </header>
 
+    <main>
     <section class="faq" id="faq">
         <div class="container">
             <div class="faq-grid">
@@ -79,19 +82,20 @@
         <p>Reach out to us directly and we'll be happy to help.</p>
         <a href="mailto:cameron@thegamarketingfirm.cc?subject=Inquiry%3A%20Growth%20Strategy%20%26%20Lead%20Generation&body=Hello%2C%20I'm%20interested%20in%20learning%20more%20about%20your%20specialized%20marketing%20systems%20for%20contractors.%20I'd%20like%20to%20schedule%20a%20discovery%20call%20to%20discuss%20how%20we%20can%20dominate%20my%20local%20market.%20Best%20regards%2C" class="btn-primary">Contact Us</a>
     </section>
+    </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-logo-group">
-                <img src="Pictures/LogoV2.png" alt="THE GREAT AWAKEN MARKETING FIRM Logo" class="blue-logo">
+                <img src="Pictures/LogoV2.png" alt="THE GREAT AWAKEN MARKETING FIRM Logo" class="blue-logo" loading="lazy" decoding="async">
                 <div class="text-logo">
                     <span class="white-text">THE GREAT AWAKEN</span>
                     <span class="gold-text">MARKETING FIRM</span>
                 </div>
                 <div class="footer-social" style="margin-top: 1.5rem; display: flex; gap: 15px; justify-content: center;">
-                    <a href="#" style="color: var(--gold); font-size: 1.2rem;"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" style="color: var(--gold); font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
-                    <a href="#" style="color: var(--gold); font-size: 1.2rem;"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" style="color: var(--gold); font-size: 1.2rem;" aria-label="Visit our Facebook page"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" style="color: var(--gold); font-size: 1.2rem;" aria-label="Visit our Instagram page"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: var(--gold); font-size: 1.2rem;" aria-label="Visit our LinkedIn page"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <p>We specialize in digital marketing strategies exclusively for contractors. From land clearing to roofing, we help you dominate your local market and generate quality leads.</p>
             </div>
@@ -117,6 +121,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

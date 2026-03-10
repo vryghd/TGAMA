@@ -5,6 +5,10 @@ const navLinks = document.querySelector('.nav-links');
 mobileMenu.addEventListener('click', () => {
     mobileMenu.classList.toggle('is-active');
     navLinks.classList.toggle('active');
+    
+    // Toggle ARIA expanded state
+    const isExpanded = mobileMenu.getAttribute('aria-expanded') === 'true';
+    mobileMenu.setAttribute('aria-expanded', !isExpanded);
 });
 
 // Close mobile menu when a link is clicked
@@ -12,6 +16,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         mobileMenu.classList.remove('is-active');
         navLinks.classList.remove('active');
+        mobileMenu.setAttribute('aria-expanded', 'false');
     });
 });
 
@@ -32,25 +37,7 @@ document.querySelectorAll('.animate-on-scroll').forEach(el => {
     observer.observe(el);
 });
 
-// Smooth scrolling for internal links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-            const navHeight = document.querySelector('nav').offsetHeight;
-            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
-            
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
+// Smooth scrolling is natively handled by CSS scroll-behavior: smooth
 
 // Navbar background change on scroll
 window.addEventListener('scroll', () => {

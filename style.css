@@ -12,6 +12,16 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background: linear-gradient(rgba(10, 25, 47, 0.92), rgba(10, 25, 47, 0.96)),
@@ -114,6 +124,12 @@ nav {
     transition: all 0.3s ease;
 }
 
+.btn-gold:hover, .btn-gold:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(184, 134, 11, 0.4);
+    outline: none;
+}
+
 /* Mobile Menu Toggle */
 .menu-toggle {
     display: none;
@@ -174,6 +190,13 @@ nav {
     margin-left: 15px;
     display: inline-block;
     transition: all 0.3s ease;
+}
+
+.hero-btns .btn-outline:hover, .hero-btns .btn-outline:focus-visible {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--text-white);
+    transform: translateY(-2px);
+    outline: none;
 }
 
 /* Bold Colored Cards & Emojis */
@@ -492,11 +515,13 @@ nav {
     font-weight: bold;
     display: inline-block;
     margin-top: 1.5rem;
-    transition: transform 0.3s;
+    transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-primary:focus-visible {
     transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    outline: none;
 }
 
 /* Footer */
@@ -540,6 +565,21 @@ footer {
 
 .footer-links ul li a:hover { color: var(--gold); }
 
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+}
+.footer-social a:hover, .footer-social a:focus-visible {
+    transform: translateY(-3px);
+    text-shadow: 0 0 10px rgba(184, 134, 11, 0.5);
+    outline: none;
+}
+
 .footer-bottom {
     text-align: center;
     border-top: 1px solid #172a45;
@@ -562,7 +602,13 @@ footer {
         height: 75px; /* Reduced from 145px on mobile */
     }
 
-    .menu-toggle { display: flex; }
+    .menu-toggle { 
+        display: flex;
+        min-width: 44px;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+    }
 
     .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
     .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(11px) rotate(45deg); }
@@ -586,13 +632,17 @@ footer {
     }
 
     .nav-links a {
-        margin: 1rem 0;
+        margin: 0;
+        padding: 1rem 0;
         font-size: 1.1rem;
-        margin-left: 0;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .hero {
-        padding: 140px 5% 80px; /* Adjusted top padding for smaller mobile logo */
+        padding: 120px 5% 60px; /* Adjusted top padding for smaller mobile logo */
     }
 
     .hero h1 {
