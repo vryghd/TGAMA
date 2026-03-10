@@ -60,3 +60,41 @@ if (contactForm) {
         contactForm.reset();
     });
 }
+
+// Automatic Interlinking for Legal Terms Site-Wide
+function interlinkLegalTerms() {
+    const terms = [
+        { name: 'Privacy Policy', url: 'privacy-policy.html' },
+        { name: 'Terms of Service', url: 'terms-of-service.html' }
+    ];
+
+    // Select text nodes in main content areas to avoid breaking attributes or scripts
+    const contentElements = document.querySelectorAll('p, li, .sms-disclosure, .legal-links');
+
+    contentElements.forEach(el => {
+        // Skip if the element is already a link or contains one for these specific terms
+        if (el.tagName === 'A' || el.closest('a')) return;
+
+        let html = el.innerHTML;
+        let modified = false;
+
+        terms.forEach(term => {
+            // Regex to find the term but not if it's already inside an <a> tag
+            // Using a simpler replacement that checks for existing links first
+            if (html.includes(term.name) && !html.includes(`href="${term.url}"`)) {
+                const regex = new RegExp(term.name, 'gi');
+                html = html.replace(regex, `<a href="${term.url}" style="color: var(--gold); text-decoration: underline;">${term.name}</a>`);
+                modified = true;
+            }
+        });
+
+        if (modified) {
+            el.innerHTML = html;
+        }
+    });
+}
+
+// Initialize Interlinking on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+    interlinkLegalTerms();
+});
