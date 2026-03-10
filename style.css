@@ -599,7 +599,7 @@ footer {
     }
     
     .blue-logo {
-        height: 75px; /* Reduced from 145px on mobile */
+        height: 100px; /* Increased from 75px on mobile */
     }
 
     .menu-toggle { 
